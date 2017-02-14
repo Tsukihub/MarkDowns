@@ -182,3 +182,38 @@ ini_set('display_errors', 1); erreurs affichées à l'écran mettre à 0 pr desa
 init_set('log_errors',1);// les écrit dans in fichier  
 ini_set('error_log, dirname(__file__) .'/  
 log_error_php.txt');   
+
+
+fonctionnaire
+====
+chaine caractères
+----
+
+		strlen($monString) 
+
+ * donne la longeur du string
+
+		substr($monString, -1)
+
+ * récupère dernier caractère d'une chaine
+
+		$rest = substr("abcdef", -1);    // retourne "f"
+		$rest = substr("abcdef", -2);    // retourne "ef"
+		$rest = substr("abcdef", -3, 1); // retourne "d"
+
+		mixed strpos ( string $haystack , mixed $needle [, int $offset = 0 ] )
+
+ * Cherche la position numérique de la première occurrence de needle dans la chaîne de caractères haystack. 
+ * Retourne la position numérique de l'occurrence relativement au début de la chaîne haystack (indépendamment de l'offset). Notez également   que la position dans la chaîne commence à 0, et non pas à 1. 
+	
+		string strpbrk ( string $haystack , string $char_list )
+ * strpbrk() recherche l'ensemble de caractères char_list dans la chaîne haystack. 
+array
+----
+* transformer .txt en array et l'afficher en allant à la ligne grâce <pre>
+
+		$string = file_get_contents("dictionnaire.txt", FILE_USE_INCLUDE_PATH);
+		$dico = explode("\n", $string);
+		echo'<pre>';
+		var_dump($dico);
+

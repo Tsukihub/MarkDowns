@@ -12,7 +12,7 @@ install
 
 Création dossier de travail
 =====
-
+s
 dossier travail  
 * style
   * sass    
@@ -117,5 +117,21 @@ ex Propriété= font souspropriété1=family souspropriété2: size
 			width: calculhauteur( 100px, 6 );
 	
 		}
+
+
+* mix entre fonction et css
+
+
+			 @mixin cercle($size){
+				height:$size;
+				width: $size;
+				border-radius: 50%;
+				font-family: arial;	
+			}
+
+
+			#para{
+				@include cercle(10px);
+			}
 
 

@@ -77,5 +77,27 @@ possibilité de:
 		}
 
 ex Propriété= font souspropriété1=family souspropriété2: size
+* un fichier css par classe
+ * avec des classes communes regroupées :
+       * dans le fichier css link dans html écrire (où menu = fichier avec css commun)
 
+
+		@import 'menu';
+       * si on marque _menu dans l'import et qu'on renomme menu.scss par _menu.scss le contenu de _menu.scss sera placé à l'endroit définit par l'import dans le fichier css mais pas de fichier menu.css généré
+
+* reprendre les attributs d'un element grâce à @extend
+			
+			.danger{
+				height: 50px;
+				width: 100px;
+				border: 1px solid black;
+				background-color: red;
+			}
+
+			.success{
+				@extend .danger;
+				background-color:red;
+	
+			}
+ * ce code génère un css avec .success qui a les même attr que .danger sauf pour la couleur
 

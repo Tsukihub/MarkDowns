@@ -100,4 +100,22 @@ ex Propriété= font souspropriété1=family souspropriété2: size
 	
 			}
  * ce code génère un css avec .success qui a les même attr que .danger sauf pour la couleur
+* Modification d'une même variable:
+  * prend en compte le dernier état de la variable en amont du code
+* Possibilité de faire des fonctions dans le scss
+ * exemple
+ 
+		@function calculhauteur( $largeur, $multiplicateur ){
+
+			@return $largeur*$multiplicateur;
+		}
+
+
+		.success{
+			@extend .danger;
+			background-color:$color;
+			width: calculhauteur( 100px, 6 );
+	
+		}
+
 

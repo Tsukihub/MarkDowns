@@ -217,3 +217,40 @@ array
 		echo'<pre>';
 		var_dump($dico);
 
+Base de données
+===
+Mots clé
+----
+SELECT Colonne FROM Table;
+rq : SELECT * pr ttes les col
+WHERE Condition
+
+Dans table mySql on donne des valeurs (type) penser à respecter ses valeurs dans la nomenclature de l'appel
+
+		SELECT jeux_video.nom, proprietaires.prenom
+		FROM proprietaires, jeux_video
+		WHERE jeux_video.ID_proprietaire = proprietaires.ID
+
+RQ : permier terme toujours table principale deuxieme table externe
+
+	SELECT Products.ProductID, Products.ProductName, Suppliers.SupplierName, Categories.CategoryName, Products.Unit, Products.Price FROM Suppliers, Products, Categories WHERE Suppliers.SupplierID=Products.SupplierID AND Products.CategoryID=Categories.CategoryID;
+
+Dans l'exemple ci-dessus la table principale est Products, Categories et Supplier sont des tables externes.
+Rq: mysql lit ligne par ligne
+
+authentification type
+$cfg['Servers'][$i]['auth_type'] = 'config';
+$cfg['Servers'][$i]['user'] = 'root';
+$cfg['Servers'][$i]['password'] = '';
+
+Phpmyadmin
+====
+type UT8_bin
+DATETIME = date + heure
+DATE = date seule
+UTF8_bin
+AI à cocher pour autoincrémenter
+var char limite max caractères 255 mais par sécurité mettre moins pour éviter surcharger mémoire
+rq : pour une date d'inscription mettre DATETIME : permet paramètrer détections robots si grand nb inscription peu tps
+ID maximum toujours stocké et prend de la mémoire même si ligne suppr, optimiser base pour suppr ID vides
+

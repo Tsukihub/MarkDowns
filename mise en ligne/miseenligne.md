@@ -30,6 +30,8 @@ Avantages
 * admin
 * 100% des ressources
 * accès physique
+
+
 inconvéniants
 -----
 * ordinateur à reserver pour cette tâche

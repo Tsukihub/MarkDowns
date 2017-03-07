@@ -30,8 +30,6 @@ Avantages
 * admin
 * 100% des ressources
 * accès physique
-
-
 inconvéniants
 -----
 * ordinateur à reserver pour cette tâche
@@ -99,6 +97,7 @@ inconvéniants
 * besoin de sécuriser
 * configuration mysql ftp... en cmd
 * pas d'accès physique
+* responsabilité nous incombe si piratage  
 
 
 Rq : mutualisé tend à disparaitre au profit de virtuel mutualisé.  
@@ -115,5 +114,29 @@ VPN se connecte à un autre serveur pour aller d'un point A à un point B
 Dans tout les cas besoin nom de domaine ou de sous domaine dans certains cas sous domaine gratuit en echange bandeau de pub  
 
 Dédié : surveillance firewall physique (interface qui bloque certaines ip)
+
+mise en œuvre
+======
+* whois.net permet de voir qui possède un nom de domaine
+* aller sur site fournisseur (ex lws)
+rq : serveur asp.net : serveur windows (virtualisation de windows, peu répendu)
+ * serveur vps dédié ou dédié mutualisé
+ * ISPconfig
+ * options dite hebergeur
+  * gestion domaine (site hebergeur) 
+     * type de redirection pr referencement
+     * Mx identification du serveur
+     * cname adresse ip où site hebergé
+     * dans config avancé box NAT/PAT 
+	   * rediriger flux externe sur port identique de l'équipement ex : box fabrik
+           * rq: ip fournisseur perso ip dynamique demander à passer dynamique en perso ip livebox pro fixe
+           * dyndns service payant pour fai qui ne gèrent pas adresse ip fixe
+  * .com et .fr ne donnent pas les mêmes obligations (mentions légales nom dev hebergeur... tt site avec cookie mention cookie tt site qui récolte data doit faire déclaration cnil (quelles data pk option pr suppr réponse cnil sous 48h))
+  * garder dns par défault (attaques dead os + configuration à revoir fréquemment à cause de modifications des normes)
+  * .asso .org que si asso ou organisme précis
+  * il est interdit de faire de la spéculation sur un nom de domaine (on ne peut pas acheter nom de domaine pour le revendre plus cher
+  * On peut acheter un nom de domaine et le mettre aux enchères
+  * si renouvellement en retard on peut perdre son nom de domaine
+
 
 
